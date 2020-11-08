@@ -5,6 +5,11 @@ function inicio() {
     el.addEventListener("touchcancel", handleCancel, false);
     el.addEventListener("touchmove", handleMove, false);
     el.addEventListener("click", click);
+
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', orientacion);
+
+      }
   }
 
   window.onload = inicio;
@@ -36,4 +41,8 @@ function inicio() {
 
   function click(){
       alert("click");
+  }
+
+  function orientacion(e){
+    document.getElementById("log").innerHTML = e.alpha;
   }
