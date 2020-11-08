@@ -12,13 +12,13 @@ function inicio() {
 
   function handleStart(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchstart" + evt.pageX + " " + evt.pageY;
+    document.getElementById("log").innerHTML = "Touchstart" + evt.touches[0].pageX + " " + evt.touches[0].pageY;
     
   }
 
   function handleEnd(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchend" + evt.pageX + " " + evt.pageY;
+    document.getElementById("log").innerHTML = "Touchend" + evt.touches[0].pageX + " " + evt.touches[0].pageY;
     
   }
 
@@ -30,7 +30,7 @@ function inicio() {
 
   function handleMove(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchmove"+ evt.pageX + " " + evt.pageY;
+    document.getElementById("log").innerHTML = "Touchmove"+ evt.touches[0].pageX + " " + evt.touches[0].pageY;
     
   }
 
