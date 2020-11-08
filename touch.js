@@ -12,25 +12,25 @@ function inicio() {
 
   function handleStart(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchstart";
+    document.getElementById("log").innerHTML = "Touchstart" + evt.pageX + " " + evt.pageY;
     
   }
 
   function handleEnd(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchend";
+    document.getElementById("log").innerHTML = "Touchend" + evt.pageX + " " + evt.pageY;
     
   }
 
   function handleCancel(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchcancel";
+    document.getElementById("log").innerHTML = "Touchcancel" + evt.pageX + " " + evt.pageY;
     
   }
 
   function handleMove(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML = "Touchmove";
+    document.getElementById("log").innerHTML = "Touchmove"+ evt.pageX + " " + evt.pageY;
     
   }
 
